@@ -109,6 +109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.7
+  rotationOffset: -90
+  spriteRenderer: {fileID: 6124090597547028428}
+  tank: {fileID: 5660608080974926322}
 --- !u!114 &4263272532301543984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +142,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &5660608080974926322 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6417890404910791673, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+  m_PrefabInstance: {fileID: 1701912466812774923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3404260713357325997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e75fb11d92369d4699f087baf9ca824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &6124090597547028428 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4855808027627259335, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+  m_PrefabInstance: {fileID: 1701912466812774923}
+  m_PrefabAsset: {fileID: 0}

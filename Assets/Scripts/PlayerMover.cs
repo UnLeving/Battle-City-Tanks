@@ -5,6 +5,8 @@ public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float rotationOffset = -90f; // Adjust in Inspector if needed
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Tank tank;
     
     private Vector2 _moveInput;
 
@@ -26,6 +28,13 @@ public class PlayerMover : MonoBehaviour
 
             // Apply the rotation offset to account for your sprite's default facing direction
             transform.rotation = Quaternion.Euler(0, 0, angle + rotationOffset);
+
+            ChangeRendererSpriteOnMove();
         }   
+    }
+
+    private void ChangeRendererSpriteOnMove()
+    {
+        spriteRenderer.sprite =spriteRenderer.sprite == tank.tankSO.tanks[0].f1 ? tank.tankSO.tanks[0].f0 : tank.tankSO.tanks[0].f1;
     }
 }

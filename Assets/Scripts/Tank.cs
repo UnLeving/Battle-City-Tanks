@@ -2,5 +2,5 @@ using UnityEngine;
 
 public class Tank : MonoBehaviour
 {
-    [SerializeField] private TankSO tankSO;
+    public TankSO tankSO;
 }

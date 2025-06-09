@@ -15,7 +15,7 @@ public class PlayerMover : MonoBehaviour
     {
         _moveInput = value.Get<Vector2>();
     }
-
+    
     private void Update()
     {
         Vector3 movement = new Vector3(_moveInput.x, _moveInput.y, 0) * (moveSpeed * Time.deltaTime);

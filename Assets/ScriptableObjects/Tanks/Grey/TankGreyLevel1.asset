@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: TankGreyLevel1
   m_EditorClassIdentifier: 
   level: 1
-  f0: {fileID: -199964146, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
-  f1: {fileID: 168727260, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
-  l0: {fileID: -687165486, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
-  fl: {fileID: -772915704, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
-  b0: {fileID: -1362214839, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
-  b1: {fileID: 855541483, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
-  r0: {fileID: 970327251, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
-  r1: {fileID: 238684346, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  f0: {fileID: -1990375555, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  f1: {fileID: 516819913, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  l0: {fileID: 2025479477, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  fl: {fileID: 1213658263, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  b0: {fileID: 916000822, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  b1: {fileID: -1429473776, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  r0: {fileID: 721416873, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  r1: {fileID: -613303404, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}

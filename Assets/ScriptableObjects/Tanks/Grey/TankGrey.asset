@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8febd8448eb4280b0f7be2973a05f1b, type: 3}
+  m_Name: TankGrey
+  m_EditorClassIdentifier: 
+  tanks:
+  - {fileID: 11400000, guid: 486d2974920716843a5db441e6418280, type: 2}
+  - {fileID: 11400000, guid: eb0d790468cffbf42bad31d650a67af4, type: 2}

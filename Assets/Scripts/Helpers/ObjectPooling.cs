@@ -39,12 +39,12 @@ namespace Helpers
 
         private T Create()
         {
-            var tile = Instantiate(prefab, transform);
-            tile.ObjectPool = _objectPool;
+            var item = Instantiate(prefab, transform);
+            item.ObjectPool = _objectPool;
 
-            _activeItem.Add(tile);
+            _activeItem.Add(item);
 
-            return tile;
+            return item;
         }
 
         private void OnReleaseToPool(T pooledObject)

@@ -8,7 +8,7 @@ public class Tank : MonoBehaviour
     
     private void OnAttack(InputValue value)
     {
-        Debug.Log("Attack");
+        //Debug.Log("Attack");
         
         cannon.Fire();
     }

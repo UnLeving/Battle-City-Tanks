@@ -31,7 +31,7 @@ public class Round : MonoBehaviour, IPoolable<Round>
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("OnCollisionEnter2D: " + other.gameObject.name);
+        //Debug.Log("OnCollisionEnter2D: " + other.gameObject.name);
         
         StopCoroutine(_fireCoroutine);
         

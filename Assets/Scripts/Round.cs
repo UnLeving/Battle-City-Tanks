@@ -1,8 +1,9 @@
 using System.Collections;
+using Helpers;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class Round : MonoBehaviour
+public class Round : MonoBehaviour, IPoolable<Round>
 {
     [SerializeField] private FloatSO speed;
     

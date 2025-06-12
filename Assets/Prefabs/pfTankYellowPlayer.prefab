@@ -68,10 +68,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5467171829559340918, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0882
-      objectReference: {fileID: 0}
     - target: {fileID: 6417890404910791673, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
       propertyPath: tankSO
       value: 

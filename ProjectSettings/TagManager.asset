@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Brick
+  - Border
+  - HQ
+  - Round
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,8 @@ TagManager:
   - Round
   - Tank
   - Bricks
-  - 
-  - 
+  - HQ
+  - Damagable
   - 
   - 
   - 

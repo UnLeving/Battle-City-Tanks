@@ -1,7 +1,9 @@
+using Helpers;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Pool;
 
-public class Tank : MonoBehaviour
+public class Tank : MonoBehaviour, IPoolable<Tank>
 {
     public TankSO tankSO;
     [SerializeField] private Cannon cannon;
@@ -12,4 +14,6 @@ public class Tank : MonoBehaviour
         
         cannon.Fire();
     }
+
+    public IObjectPool<Tank> ObjectPool { get; set; }
 }

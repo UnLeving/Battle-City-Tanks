@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a46768600bbaa49a6af83a49e24101, type: 3}
   m_Name: LevelConfig 1
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Level 1
   Level: 0
   EnemyCount: 20

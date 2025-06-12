@@ -8,10 +8,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 502358641368009624, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.13130204
+      objectReference: {fileID: 0}
+    - target: {fileID: 502358641368009624, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.13130206
+      objectReference: {fileID: 0}
+    - target: {fileID: 502358641368009624, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.000000007450581
+      objectReference: {fileID: 0}
+    - target: {fileID: 502358641368009624, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 502358641368009624, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 502358641368009624, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 4080319854766464166, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
       propertyPath: m_Name
       value: pfTankGreyEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4855808027627259335, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1152763140, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
     - target: {fileID: 5397958598378888810, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

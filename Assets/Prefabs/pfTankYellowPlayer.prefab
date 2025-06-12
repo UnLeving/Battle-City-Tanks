@@ -24,14 +24,6 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.00024858117
       objectReference: {fileID: 0}
-    - target: {fileID: 680470210973868121, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 680470210973868121, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4080319854766464166, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
       propertyPath: m_Name
       value: pfTankYellowPlayer
@@ -80,10 +72,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.0882
       objectReference: {fileID: 0}
-    - target: {fileID: 6417890404910791673, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
-      propertyPath: cannon
-      value: 
-      objectReference: {fileID: 7049062505197428122}
     - target: {fileID: 6417890404910791673, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
       propertyPath: tankSO
       value: 
@@ -166,14 +154,3 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4855808027627259335, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
   m_PrefabInstance: {fileID: 1701912466812774923}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7049062505197428122 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8524510760355657617, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
-  m_PrefabInstance: {fileID: 1701912466812774923}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c65ce87994004c3ca588f758e5b8fbc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

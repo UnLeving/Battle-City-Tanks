@@ -11,10 +11,12 @@ public class RoundObjectPooling : MonoBehaviour
     [SerializeField] private bool collectionCheck = true;
     [SerializeField] private int defaultCapacity = 20;
     [SerializeField] private int maxSize = 30;
-    
+
     private IObjectPool<Round> _objectPool;
     private List<Round> _activeRounds = new();
-    
+
+    public Round Round => _objectPool.Get();
+
     private void Awake()
     {
         Instance = this;
@@ -26,12 +28,12 @@ public class RoundObjectPooling : MonoBehaviour
             OnGetFromPool, OnReleaseToPool, OnDestroyPooledObject,
             collectionCheck, defaultCapacity, maxSize);
     }
-    
+
     private Round Create()
     {
         var tile = Instantiate(prefab, transform);
         tile.ObjectPool = _objectPool;
-        
+
         _activeRounds.Add(tile);
 
         return tile;
@@ -50,7 +52,7 @@ public class RoundObjectPooling : MonoBehaviour
     private void OnDestroyPooledObject(Round pooledObject)
     {
         _activeRounds.Remove(pooledObject);
-            
+
         Destroy(pooledObject.gameObject);
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5544833759232090433}
   - component: {fileID: -3769516881068575113}
   m_Layer: 7
-  m_Name: Round
+  m_Name: pfRound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac18d8ae68a4adcb82881dce9a7a9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: {fileID: 11400000, guid: e40bcb27e412ebe48960b3eafbaec90c, type: 2}
 --- !u!58 &-5544833759232090433
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -146,14 +147,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8988055146151078746}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -163,5 +164,5 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4

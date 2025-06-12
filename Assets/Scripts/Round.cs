@@ -1,12 +1,20 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class Round : MonoBehaviour
 {
+    [SerializeField] private FloatSO speed;
+    
     private Coroutine _fireCoroutine;
+    private IObjectPool<Round> _objectPool;
+        
+    public IObjectPool<Round> ObjectPool { set => _objectPool = value; }
 
-    public void Init(Vector3 dir)
+    public void Init(Vector3 dir, Vector3 startPos)
     {
+        transform.position = startPos;
+        
         _fireCoroutine = StartCoroutine(Fire(dir));
     }
 
@@ -14,7 +22,7 @@ public class Round : MonoBehaviour
     {
         while (true)
         {
-            transform.Translate(dir * (.5f * Time.deltaTime));
+            transform.Translate(dir * (speed.Value * Time.deltaTime));
 
             yield return new WaitForEndOfFrame();
         }
@@ -25,5 +33,7 @@ public class Round : MonoBehaviour
         Debug.Log("OnCollisionEnter2D: " + other.gameObject.name);
         
         StopCoroutine(_fireCoroutine);
+        
+        _objectPool.Release(this);
     }
 }

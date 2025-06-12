@@ -3,10 +3,17 @@ using UnityEngine;
 
 public class Cannon : MonoBehaviour
 {
+    [SerializeField] private FloatSO shootInterval;
+    private float _lastFireTime;
+    
     public void Fire()
     {
-        var _round = ObjectPooling<Round>.Instance.Item;
+        if (Time.time - _lastFireTime < shootInterval.Value) return;
+        
+        var round = ObjectPooling<Round>.Instance.Item;
        
-       _round.Init(transform.up, transform.position);
+       round.Init(transform.up, transform.position);
+       
+       _lastFireTime = Time.time;
     }
 }

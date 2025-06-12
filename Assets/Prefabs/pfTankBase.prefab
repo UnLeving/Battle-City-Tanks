@@ -222,3 +222,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65ce87994004c3ca588f758e5b8fbc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootInterval: {fileID: 11400000, guid: a6c1f6e9209fb5c4b8cd979d9ab296f3, type: 2}

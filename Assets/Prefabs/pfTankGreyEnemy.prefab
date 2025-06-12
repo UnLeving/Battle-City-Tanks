@@ -87,5 +87,46 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4080319854766464166, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7955247164347587764}
   m_SourcePrefab: {fileID: 100100000, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+--- !u!1 &2300560430310642136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4080319854766464166, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+  m_PrefabInstance: {fileID: 2831936026558614910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7955247164347587764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300560430310642136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c53abe652e42a0ac3b4c862e812686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7218783545594923193}
+  tank: {fileID: 9105684290325198471}
+  rotationOffset: -90
+  moveSpeed: {fileID: 11400000, guid: edf2197d8c13f5740b5baff3c5499449, type: 2}
+  directionChangeInterval: 2
+--- !u!212 &7218783545594923193 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4855808027627259335, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+  m_PrefabInstance: {fileID: 2831936026558614910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9105684290325198471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6417890404910791673, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+  m_PrefabInstance: {fileID: 2831936026558614910}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2300560430310642136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e75fb11d92369d4699f087baf9ca824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

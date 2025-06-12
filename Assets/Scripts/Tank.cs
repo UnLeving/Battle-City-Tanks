@@ -15,5 +15,10 @@ public class Tank : MonoBehaviour, IPoolable<Tank>
         cannon.Fire();
     }
 
+    public void OnAttack()
+    {
+        OnAttack(null);
+    }
+
     public IObjectPool<Tank> ObjectPool { get; set; }
 }

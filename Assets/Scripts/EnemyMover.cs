@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyMover : MonoBehaviour
 {
@@ -8,11 +10,18 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] private FloatSO moveSpeed;
     [SerializeField] private float directionChangeInterval = 2f;
     [SerializeField] private LayerMask obstacleLayer;
-
+    [SerializeField] private Transform obstacleDetectorTransform;
+    
     private Vector2Int currentDirection = Vector2Int.up;
     private Vector2Int[] directions = { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
     private float lastDirectionChange;
 
+    private void Start()
+    {
+        currentDirection = Vector2Int.down;
+
+        lastDirectionChange = Time.time;
+    }
 
     private void Update()
     {
@@ -31,6 +40,8 @@ public class EnemyMover : MonoBehaviour
 
         float angle = Mathf.Atan2(currentDirection.y, currentDirection.x) * Mathf.Rad2Deg;
 
+        //Debug.Log(angle);
+        
         transform.rotation = Quaternion.Euler(0, 0, angle + rotationOffset);
 
         ChangeRendererSpriteOnMove();
@@ -58,7 +69,7 @@ public class EnemyMover : MonoBehaviour
     private void ChooseNewDirection()
     {
         if (!(Time.time - lastDirectionChange > directionChangeInterval)) return;
-
+        
         currentDirection = directions[Random.Range(0, directions.Length)];
 
         lastDirectionChange = Time.time;
@@ -66,7 +77,9 @@ public class EnemyMover : MonoBehaviour
 
     private bool IsObstacleAhead()
     {
-        var obstacle = Physics2D.Raycast(tank.Cannon.transform.position, currentDirection, 0.1f, obstacleLayer);
+        var obstacle = Physics2D.Raycast(obstacleDetectorTransform.position, currentDirection, 0.1f, obstacleLayer);
+
+        //Debug.Log(obstacle.collider);
         
         return obstacle;
     }

@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5397958598378888810, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.23298666
       objectReference: {fileID: 0}
     - target: {fileID: 5397958598378888810, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.88003737
       objectReference: {fileID: 0}
     - target: {fileID: 5397958598378888810, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -88,9 +88,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 6124090597547028428}
   tank: {fileID: 5660608080974926322}
   moveSpeed: {fileID: 11400000, guid: edf2197d8c13f5740b5baff3c5499449, type: 2}
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &4263272532301543984
 MonoBehaviour:
   m_ObjectHideFlags: 0

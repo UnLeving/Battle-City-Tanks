@@ -14,7 +14,7 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         _maxCount = levelConfig.EnemyCount;
-        
+
         StartCoroutine(SpawnEnemyWorker());
     }
 
@@ -25,20 +25,21 @@ public class EnemyManager : MonoBehaviour
             if (spawnPoints.All(sp => sp.Busy == true))
             {
                 //Debug.Log("Spawn points are busy");
-                
+
                 yield return new WaitForSeconds(1);
-                
+
                 continue;
             }
-            
+
             --_maxCount;
-            
+
             var freeSpawnPoint = spawnPoints.First(sp => sp.Busy == false);
             freeSpawnPoint.Busy = true;
-            
+
             var tank = TankObjectPooling.Instance.Item;
-            
+
             tank.transform.position = freeSpawnPoint.transform.position;
+            tank.transform.rotation = freeSpawnPoint.transform.rotation;
 
             Debug.Log("Tank spawned");
         }

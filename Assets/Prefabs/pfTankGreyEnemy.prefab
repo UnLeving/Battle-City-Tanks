@@ -80,10 +80,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5467171829559340918, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.06609
-      objectReference: {fileID: 0}
     - target: {fileID: 6417890404910791673, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
       propertyPath: tankSO
       value: 
@@ -121,9 +117,15 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
+  obstacleDetectorTransform: {fileID: 7252731399421649793}
 --- !u!212 &7218783545594923193 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4855808027627259335, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
+  m_PrefabInstance: {fileID: 2831936026558614910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7252731399421649793 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4894267138739613439, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}
   m_PrefabInstance: {fileID: 2831936026558614910}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &9105684290325198471 stripped

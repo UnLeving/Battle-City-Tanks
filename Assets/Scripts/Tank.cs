@@ -6,7 +6,8 @@ using UnityEngine.Pool;
 
 public class Tank : MonoBehaviour, IPoolable<Tank>, IDamageable
 {
-    [SerializeField] private SpriteRendererEffect spriteRendererEffect;
+    [SerializeField] private SpriteRendererEffect explosionSpriteRendererEffect;
+    [SerializeField] private SpriteRendererEffect invincibilitySpriteRendererEffect;
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private Collider2D _collider;
     public TankSO tankSO;
@@ -16,10 +17,16 @@ public class Tank : MonoBehaviour, IPoolable<Tank>, IDamageable
     public event Action OnHitEvent;
     public event Action OnDeathEvent;
 
+    private bool _isInvincible = false;
+
     private void OnEnable()
     {
         _renderer.enabled = true;
         _collider.enabled = true;
+
+        _isInvincible = true;
+
+        invincibilitySpriteRendererEffect.PlayEffect(5f, () => { _isInvincible = false; });
     }
 
     private void OnDisable()
@@ -40,14 +47,16 @@ public class Tank : MonoBehaviour, IPoolable<Tank>, IDamageable
 
     public void OnHit()
     {
+        if (_isInvincible) return;
+
         OnHitEvent?.Invoke();
 
         OnDisable();
 
-        spriteRendererEffect.PlayEffect(0f, () =>
+        explosionSpriteRendererEffect.PlayEffect(0f, () =>
         {
             gameObject.SetActive(false);
-            
+
             OnDeathEvent?.Invoke();
         });
     }

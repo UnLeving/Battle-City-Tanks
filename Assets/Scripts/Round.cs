@@ -1,26 +1,30 @@
+using System;
 using System.Collections;
 using Helpers;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class Round : MonoBehaviour, IPoolable<Round>, IDamageable
+public class Round : MonoBehaviour, IDamageable
 {
     [SerializeField] private FloatSO speed;
     [SerializeField] private Transform viewTransform;
-
+[SerializeField] private Collider2D colliderToExclude;
     private Coroutine _fireCoroutine;
-    private IObjectPool<Round> _objectPool;
     private float rotationOffset = -90f;
 
-    public IObjectPool<Round> ObjectPool
-    {
-        set => _objectPool = value;
-    }
+    public bool Released { get; private set;}
+    private Transform _parentTransform;
 
-    private bool _released;
+    private void Start()
+    {
+        Released = true;
+        
+        _parentTransform = transform.parent;
+    }
 
     public void Init(Vector3 dir, Vector3 startPos)
     {
+        transform.parent = null;
         transform.position = startPos;
 
         // Calculate the angle based on the input vector
@@ -31,7 +35,7 @@ public class Round : MonoBehaviour, IPoolable<Round>, IDamageable
 
         _fireCoroutine = StartCoroutine(Fire(dir));
 
-        _released = false;
+        Released = false;
     }
 
     private IEnumerator Fire(Vector3 dir)
@@ -46,8 +50,8 @@ public class Round : MonoBehaviour, IPoolable<Round>, IDamageable
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        //Debug.Log("OnCollisionEnter2D: " + other.gameObject.name);
-
+        if(other.collider == colliderToExclude) return;
+        
         StopCoroutine(_fireCoroutine);
 
         if (other.gameObject.TryGetComponent(out IDamageable damageable))
@@ -55,19 +59,17 @@ public class Round : MonoBehaviour, IPoolable<Round>, IDamageable
             damageable.OnHit();
         }
 
-        if (_released) return;
-
-        _objectPool.Release(this);
-
-        _released = true;
+        OnHit();
     }
 
     public void OnHit()
     {
-        if (_released) return;
-        
-        _objectPool.Release(this);
+        if (Released) return;
 
-        _released = true;
+        Released = true;
+        
+        gameObject.SetActive(false);
+        
+        transform.parent = _parentTransform;
     }
 }

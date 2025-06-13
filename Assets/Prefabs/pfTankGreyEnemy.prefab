@@ -114,6 +114,9 @@ MonoBehaviour:
   rotationOffset: -90
   moveSpeed: {fileID: 11400000, guid: edf2197d8c13f5740b5baff3c5499449, type: 2}
   directionChangeInterval: 2
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!212 &7218783545594923193 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4855808027627259335, guid: 5037225fbd550e142baf12c24db24c4d, type: 3}

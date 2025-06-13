@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,6 +21,7 @@ public class PlayerMover : MonoBehaviour
     private void Update()
     {
         Vector3 movement = new Vector3(_moveInput.x, _moveInput.y, 0) * (moveSpeed.Value * Time.deltaTime);
+        
         transform.position += movement;
 
         if (_moveInput != Vector2.zero)

@@ -64,6 +64,8 @@ public class Round : MonoBehaviour, IPoolable<Round>, IDamageable
 
     public void OnHit()
     {
+        if (_released) return;
+        
         _objectPool.Release(this);
 
         _released = true;

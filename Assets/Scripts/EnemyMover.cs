@@ -7,10 +7,12 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] private float rotationOffset = -90f;
     [SerializeField] private FloatSO moveSpeed;
     [SerializeField] private float directionChangeInterval = 2f;
+    [SerializeField] private LayerMask obstacleLayer;
 
     private Vector2Int currentDirection = Vector2Int.up;
     private Vector2Int[] directions = { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
     private float lastDirectionChange;
+
 
     private void Update()
     {
@@ -36,6 +38,11 @@ public class EnemyMover : MonoBehaviour
 
     private void UpdateMovement()
     {
+        if (IsObstacleAhead())
+        {
+            lastDirectionChange = Time.time + directionChangeInterval;
+        }
+
         Vector3 movement = new Vector3(currentDirection.x, currentDirection.y, 0) * (moveSpeed.Value * Time.deltaTime);
 
         transform.position += movement;
@@ -56,7 +63,13 @@ public class EnemyMover : MonoBehaviour
 
         lastDirectionChange = Time.time;
     }
-    
+
+    private bool IsObstacleAhead()
+    {
+        // Raycast slightly ahead to detect obstacles before physically colliding
+        return Physics2D.Raycast(transform.position, currentDirection, 0.6f, obstacleLayer);
+    }
+
     private void UpdateFiring()
     {
         tank.OnAttack();

@@ -15,12 +15,12 @@ TagManager:
   - 
   - Water
   - UI
-  - Border
   - Round
-  - Tank
-  - Bricks
-  - HQ
   - Damagable
+  - ObstacleDetector
+  - 
+  - 
+  - 
   - 
   - 
   - 

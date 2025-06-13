@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4855808027627259335}
   - component: {fileID: 502358641368009624}
   - component: {fileID: 680470210973868121}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: pfTankBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tankSO: {fileID: 0}
-  cannon: {fileID: 8524510760355657617}
+  <Cannon>k__BackingField: {fileID: 8524510760355657617}
 --- !u!212 &4855808027627259335
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0000097081065, y: -0.000080786645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -149,7 +149,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.13018991, y: 0.12985225}
   m_EdgeRadius: 0
 --- !u!50 &680470210973868121
 Rigidbody2D:
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5467171829559340918}
   - component: {fileID: 8524510760355657617}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 4560002539880579876}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0644, z: 0}
+  m_LocalPosition: {x: 0, y: 0.06519, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

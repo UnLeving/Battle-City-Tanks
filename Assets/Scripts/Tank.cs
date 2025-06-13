@@ -6,13 +6,10 @@ using UnityEngine.Pool;
 public class Tank : MonoBehaviour, IPoolable<Tank>
 {
     public TankSO tankSO;
-    [SerializeField] private Cannon cannon;
-    
+    [field: SerializeField] public Cannon Cannon {  get; private set; }
     private void OnAttack(InputValue value)
     {
-        //Debug.Log("Attack");
-        
-        cannon.Fire();
+        Cannon.Fire();
     }
 
     public void OnAttack()

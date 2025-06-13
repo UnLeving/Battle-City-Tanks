@@ -40,7 +40,7 @@ public class EnemyMover : MonoBehaviour
     {
         if (IsObstacleAhead())
         {
-            lastDirectionChange = Time.time + directionChangeInterval;
+            lastDirectionChange = 0f;
         }
 
         Vector3 movement = new Vector3(currentDirection.x, currentDirection.y, 0) * (moveSpeed.Value * Time.deltaTime);
@@ -66,8 +66,9 @@ public class EnemyMover : MonoBehaviour
 
     private bool IsObstacleAhead()
     {
-        // Raycast slightly ahead to detect obstacles before physically colliding
-        return Physics2D.Raycast(transform.position, currentDirection, 0.6f, obstacleLayer);
+        var obstacle = Physics2D.Raycast(tank.Cannon.transform.position, currentDirection, 0.1f, obstacleLayer);
+        
+        return obstacle;
     }
 
     private void UpdateFiring()

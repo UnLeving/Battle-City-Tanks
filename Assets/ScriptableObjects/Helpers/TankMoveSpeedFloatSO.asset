@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31551cc91f23bc94f9d55044fba2f76c, type: 3}
   m_Name: TankMoveSpeedFloatSO
   m_EditorClassIdentifier: 
-  Value: 0.7
+  Value: 0.4

@@ -20,7 +20,7 @@ public class EnemyManager : MonoBehaviour
 
     private IEnumerator SpawnEnemyWorker()
     {
-        while (_maxCount >= 0)
+        while (_maxCount > 0)
         {
             if (spawnPoints.All(sp => sp.Busy == true))
             {

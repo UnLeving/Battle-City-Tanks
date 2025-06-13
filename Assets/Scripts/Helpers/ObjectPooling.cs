@@ -28,15 +28,12 @@ namespace Helpers
         private void Awake()
         {
             Instance = this;
-        }
-
-        private void Start()
-        {
+            
             _objectPool = new ObjectPool<T>(Create,
                 OnGetFromPool, OnReleaseToPool, OnDestroyPooledObject,
                 collectionCheck, defaultCapacity, maxSize);
         }
-
+        
         private T Create()
         {
             var item = Instantiate(prefab, transform);

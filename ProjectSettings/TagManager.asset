@@ -15,11 +15,11 @@ TagManager:
   - 
   - Water
   - UI
-  - Round
-  - Damagable
+  - ProjectilePlayer
+  - DamagablePlayer
   - ObstacleDetector
-  - 
-  - 
+  - ProjectileEnemy
+  - DamagableEnemy
   - 
   - 
   - 

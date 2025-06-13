@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ef038f89ef3674583227c05bbfbe29, type: 3}
   m_Name: invincibilitySpriteRendererEffects
   m_EditorClassIdentifier: 
-  sprites: []
-  delay: 0
+  sprites:
+  - {fileID: -1108445003, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  - {fileID: 687501112, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  delay: 0.2
+  loop: 1

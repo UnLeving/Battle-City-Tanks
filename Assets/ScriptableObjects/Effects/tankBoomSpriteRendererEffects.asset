@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ef038f89ef3674583227c05bbfbe29, type: 3}
   m_Name: tankBoomSpriteRendererEffects
   m_EditorClassIdentifier: 
-  sprites: []
-  delay: 0
+  sprites:
+  - {fileID: 247511147, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  - {fileID: 1445268532, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
+  delay: 0.2
+  loop: 0

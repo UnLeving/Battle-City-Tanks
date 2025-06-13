@@ -6,6 +6,7 @@ public class Round : MonoBehaviour, IDamageable
     [SerializeField] private FloatSO speed;
     [SerializeField] private Transform viewTransform;
     [SerializeField] private Collider2D colliderToExclude;
+    [SerializeField] private SpriteRendererEffect spriteRendererEffect;
     private Coroutine _fireCoroutine;
     private float rotationOffset = -90f;
 
@@ -65,11 +66,16 @@ public class Round : MonoBehaviour, IDamageable
     public void OnHit()
     {
         if (Released) return;
+        
+        Debug.Log("OnHit");
 
-        Released = true;
+        spriteRendererEffect.PlayEffect(0f,() =>
+        {
+            Released = true;
 
-        gameObject.SetActive(false);
+            gameObject.SetActive(false);
 
-        transform.parent = _parentTransform;
+            transform.parent = _parentTransform;
+        });
     }
 }

@@ -16,5 +16,5 @@ MonoBehaviour:
   - {fileID: 1598172311, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
   - {fileID: -850324669, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
   - {fileID: 1096089843, guid: 214a61b0333bdc04ebbf175206873d90, type: 3}
-  delay: 0.2
+  delay: 0.05
   loop: 0

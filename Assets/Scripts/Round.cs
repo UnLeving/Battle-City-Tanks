@@ -67,7 +67,7 @@ public class Round : MonoBehaviour, IDamageable
     {
         if (Released) return;
         
-        Debug.Log("OnHit");
+        //Debug.Log("OnHit");
 
         spriteRendererEffect.PlayEffect(0f,() =>
         {

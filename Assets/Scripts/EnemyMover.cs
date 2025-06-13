@@ -16,15 +16,37 @@ public class EnemyMover : MonoBehaviour
     private Vector2Int[] directions = { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
     private float lastDirectionChange;
 
+    private bool canMove;
+    
+    private void OnEnable()
+    {
+        Debug.Log("EnemyMover.OnEnable");
+        
+        tank.OnHitEvent += TankOnOnHitEvent;
+        
+        canMove = true;
+    }
+
     private void Start()
     {
         currentDirection = Vector2Int.down;
 
         lastDirectionChange = Time.time;
     }
+    
+    private void OnDisable()
+    {
+        Debug.Log("EnemyMover.OnDisable");
+        
+        tank.OnHitEvent -= TankOnOnHitEvent;
+        
+        canMove = false;
+    }
 
     private void Update()
     {
+        if(canMove == false) return;
+        
         ChooseNewDirection();
 
         UpdateMovement();
@@ -32,6 +54,11 @@ public class EnemyMover : MonoBehaviour
         UpdateRotation();
 
         UpdateFiring();
+    }
+    
+    private void TankOnOnHitEvent()
+    {
+        canMove = false;
     }
 
     private void UpdateRotation()

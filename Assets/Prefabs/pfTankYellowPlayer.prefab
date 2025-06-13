@@ -88,6 +88,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 6124090597547028428}
   tank: {fileID: 5660608080974926322}
   moveSpeed: {fileID: 11400000, guid: edf2197d8c13f5740b5baff3c5499449, type: 2}
+  playerInput: {fileID: 4263272532301543984}
 --- !u!114 &4263272532301543984
 MonoBehaviour:
   m_ObjectHideFlags: 0

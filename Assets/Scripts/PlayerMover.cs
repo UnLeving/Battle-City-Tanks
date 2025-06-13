@@ -8,9 +8,28 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Tank tank;
     [SerializeField] private FloatSO moveSpeed;
-
+    [SerializeField] private PlayerInput playerInput;
 
     private Vector2 _moveInput;
+
+    private void OnEnable()
+    {
+        playerInput.enabled = true;
+        
+        tank.OnHitEvent += TankOnOnHitEvent;
+    }
+
+    private void OnDisable()
+    {
+        playerInput.enabled = false;
+        
+        tank.OnHitEvent -= TankOnOnHitEvent;
+    }
+    
+    private void TankOnOnHitEvent()
+    {
+        playerInput.enabled = false;
+    }
 
     // Called when move input changes (automatically hooked up by Input System)
     private void OnMove(InputValue value)
@@ -21,7 +40,7 @@ public class PlayerMover : MonoBehaviour
     private void Update()
     {
         Vector3 movement = new Vector3(_moveInput.x, _moveInput.y, 0) * (moveSpeed.Value * Time.deltaTime);
-        
+
         transform.position += movement;
 
         if (_moveInput != Vector2.zero)

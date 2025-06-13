@@ -18,7 +18,7 @@ public class Cannon : MonoBehaviour
 
         round.gameObject.SetActive(true);
 
-        round.Init(transform.up, transform.position);
+        round.  Init(transform.up, transform.position);
 
         _lastFireTime = Time.time;
     }

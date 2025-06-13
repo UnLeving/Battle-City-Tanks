@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e6d6bf6d195dfe4fbd56cad4f649363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aliveView: {fileID: 1978704960862393900}
   deadView: {fileID: 6870370891993657702}
 --- !u!1 &6870370891993657702
 GameObject:

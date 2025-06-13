@@ -36,7 +36,7 @@ public class EnemyMover : MonoBehaviour
     
     private void OnDisable()
     {
-        Debug.Log("EnemyMover.OnDisable");
+        //Debug.Log("EnemyMover.OnDisable");
         
         tank.OnHitEvent -= TankOnOnHitEvent;
         

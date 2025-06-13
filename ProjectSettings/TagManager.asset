@@ -20,7 +20,7 @@ TagManager:
   - ObstacleDetector
   - ProjectileEnemy
   - DamagableEnemy
-  - 
+  - Walls
   - 
   - 
   - 

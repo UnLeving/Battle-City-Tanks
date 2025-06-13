@@ -32,12 +32,14 @@ public class Round : MonoBehaviour, IDamageable
         transform.rotation = Quaternion.Euler(0, 0, angle + rotationOffset);
 
         _fireCoroutine = StartCoroutine(Fire(dir));
-
-        Released = false;
     }
 
     private IEnumerator Fire(Vector3 dir)
     {
+        Debug.Log("Fire");
+        
+        Released = false;
+        
         while (true)
         {
             transform.Translate(dir * (speed.Value * Time.deltaTime), Space.World);
@@ -75,7 +77,7 @@ public class Round : MonoBehaviour, IDamageable
 
             gameObject.SetActive(false);
 
-            transform.parent = _parentTransform;
+            transform.SetParent(_parentTransform);
         });
     }
 }

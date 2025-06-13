@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Level 1
   Level: 0
-  EnemyCount: 1
+  EnemyCount: 3

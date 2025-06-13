@@ -6,7 +6,7 @@ public class SpriteRendererEffect : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private SpriteRendererEffectsSO spriteRendererEffectsSO;
-
+    
     public void PlayEffect(float duration = 0f, Action onFinished = null)
     {
         StartCoroutine(Play(duration, onFinished));
@@ -14,7 +14,7 @@ public class SpriteRendererEffect : MonoBehaviour
     
     private IEnumerator Play(float duration = 0f, Action onFinished = null)
     {
-        float timer = 0f;
+        float startTime = Time.time;
 
         do
         {
@@ -22,15 +22,17 @@ public class SpriteRendererEffect : MonoBehaviour
             
             for (int i = 0; i < spriteRendererEffectsSO.sprites.Length; i++)
             {
-                timer += Time.deltaTime;
-
-                //Debug.Log("inside for");
-                
                 spriteRenderer.sprite = spriteRendererEffectsSO.sprites[i];
 
                 yield return new WaitForSeconds(spriteRendererEffectsSO.delay);
+                
+                if (duration > 0f && Time.time - startTime >= duration)
+                    break;
             }
-        } while (spriteRendererEffectsSO.loop || (duration > 0f && timer < duration));
+            
+            //Debug.Log("inside for: duration: " + duration + " timer: " + timer);
+            
+        } while (spriteRendererEffectsSO.loop || (duration > 0f && Time.time - startTime < duration));
 
         //Debug.Log("Finished");
 

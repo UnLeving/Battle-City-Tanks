@@ -1,4 +1,5 @@
 using Managers;
+using UI;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
@@ -14,16 +15,19 @@ namespace DI
         [SerializeField] private SpawnPoint[] enemySpawnPoints;
         [SerializeField] private TankObjectPooling tankObjectPooling;
         [SerializeField] private HQView hqView;
+        [SerializeField] private GameOver gameOverView;
         
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterInstance(levelConfig);
             builder.RegisterInstance(playerTankPrefab).WithParameter("playerTank");
             builder.RegisterInstance(enemyTankPrefab).WithParameter("enemyTank");
-            builder.RegisterInstance(playerSpawnPoint).WithParameter("playerSpawn");
-            builder.RegisterInstance(enemySpawnPoints).WithParameter("enemySpawns");
-            builder.RegisterInstance(tankObjectPooling);
-            builder.RegisterInstance(hqView);
+            
+            builder.RegisterComponent(playerSpawnPoint).WithParameter("playerSpawn");
+            builder.RegisterComponent(enemySpawnPoints).WithParameter("enemySpawns");
+            builder.RegisterComponent(tankObjectPooling);
+            builder.RegisterComponent(hqView);
+            builder.RegisterComponent(gameOverView);
 
             builder.Register<GameManager>(Lifetime.Singleton);
             builder.Register<PlayerManager>(Lifetime.Singleton);

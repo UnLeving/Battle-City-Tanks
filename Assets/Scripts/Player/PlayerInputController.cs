@@ -11,24 +11,26 @@ namespace Player
         private Tank _tank;
         private SpriteRenderer _spriteRenderer;
         private Vector2 _moveInput;
+        private Rigidbody2D _rigidbody2D;
 
         private void Awake()
         {
             _tank = GetComponent<Tank>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
+            _rigidbody2D = GetComponent<Rigidbody2D>(); // Add this
         }
-        
+
         public void OnMove(InputValue input)
         {
             Vector2 rawInput = input.Get<Vector2>();
-    
+
             // If no input, clear movement
             if (rawInput == Vector2.zero)
             {
                 _moveInput = Vector2.zero;
                 return;
             }
-    
+
             // Check if there's new input on X axis
             if (Mathf.Abs(rawInput.x) > 0 && Mathf.Abs(_moveInput.x) == 0)
             {
@@ -65,20 +67,27 @@ namespace Player
             _tank.Cannon.Fire();
         }
 
+        private void FixedUpdate()
+        {
+            //if (_moveInput == Vector2.zero) return;
+
+            Vector2 movement = _moveInput * (moveSpeed.Value * Time.fixedDeltaTime);
+            Vector2 newPosition = _rigidbody2D.position + movement;
+
+            _rigidbody2D.MovePosition(newPosition);
+        }
+
         private void Update()
         {
-            Vector3 movement = new Vector3(_moveInput.x, _moveInput.y, 0) * (moveSpeed.Value * Time.deltaTime);
-            
-            transform.position += movement;
-
             if (_moveInput == Vector2.zero) return;
-            
+
             float angle = Mathf.Atan2(_moveInput.y, _moveInput.x) * Mathf.Rad2Deg;
-                
+
             transform.rotation = Quaternion.Euler(0, 0, angle + rotationOffset);
-                
+
             ChangeRendererSpriteOnMove();
         }
+
 
         private void ChangeRendererSpriteOnMove()
         {

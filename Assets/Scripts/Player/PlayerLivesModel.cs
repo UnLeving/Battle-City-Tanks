@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerLivesModel : MonoBehaviour
+    public class PlayerLivesModel
     {
         public int CurrentLives { get; private set; }
 

@@ -10,6 +10,7 @@ namespace UI
         [SerializeField] private Transform startPositionTransform;
         [SerializeField] private Transform endPositionTransform;
         [SerializeField] private Transform viewTransform;
+        [SerializeField] private FloatSO lerpDuration;
         
         private GameManager _gameManager;
         
@@ -33,7 +34,7 @@ namespace UI
 
         private void PlayAnimation()
         {
-            viewTransform.DOMoveY(endPositionTransform.position.y, 1f);
+            viewTransform.DOMoveY(endPositionTransform.position.y, lerpDuration.Value);
         }
     }
 }

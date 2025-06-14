@@ -11014,6 +11014,7 @@ MonoBehaviour:
   startPositionTransform: {fileID: 952128007}
   endPositionTransform: {fileID: 1768987119}
   viewTransform: {fileID: 572440509}
+  lerpDuration: {fileID: 11400000, guid: 461bcfc7d6f606146aa2f7e61f86039c, type: 2}
 --- !u!1 &1768987118
 GameObject:
   m_ObjectHideFlags: 0

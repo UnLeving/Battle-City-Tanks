@@ -52,7 +52,7 @@ namespace Managers
 
                 tank.OnDeathEvent += () => HandleEnemyDeath(freeSpawnPoint);
 
-                Debug.Log("Tank spawned");
+                //Debug.Log("Tank spawned");
             }
         }
 

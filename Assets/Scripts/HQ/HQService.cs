@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace DI
+namespace HQ
 {
     public class HQService
     {

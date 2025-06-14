@@ -1,4 +1,5 @@
 using DI;
+using HQ;
 using UnityEngine;
 using VContainer;
 

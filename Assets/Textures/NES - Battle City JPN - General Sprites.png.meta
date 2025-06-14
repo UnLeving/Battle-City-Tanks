@@ -4263,7 +4263,7 @@ TextureImporter:
         serializedVersion: 2
         x: 378
         y: 113
-        width: 4
+        width: 14
         height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -4284,7 +4284,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 385
-        y: 113
+        y: 124
         width: 7
         height: 7
       alignment: 0
@@ -5094,7 +5094,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Battle City JPN - General Sprites_266
+      name: 5
       rect:
         serializedVersion: 2
         x: 329
@@ -5116,7 +5116,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Battle City JPN - General Sprites_267
+      name: 6
       rect:
         serializedVersion: 2
         x: 337
@@ -5644,7 +5644,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Battle City JPN - General Sprites_291
+      name: 7
       rect:
         serializedVersion: 2
         x: 345
@@ -5666,7 +5666,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Battle City JPN - General Sprites_292
+      name: 8
       rect:
         serializedVersion: 2
         x: 353
@@ -5754,7 +5754,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Battle City JPN - General Sprites_296
+      name: 1
       rect:
         serializedVersion: 2
         x: 338
@@ -5776,7 +5776,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Battle City JPN - General Sprites_297
+      name: 2
       rect:
         serializedVersion: 2
         x: 345
@@ -6172,7 +6172,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Battle City JPN - General Sprites_316
+      name: 9
       rect:
         serializedVersion: 2
         x: 361
@@ -6238,7 +6238,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Battle City JPN - General Sprites_319
+      name: 0
       rect:
         serializedVersion: 2
         x: 329
@@ -6260,7 +6260,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Battle City JPN - General Sprites_320
+      name: 3
       rect:
         serializedVersion: 2
         x: 353
@@ -6282,7 +6282,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NES - Battle City JPN - General Sprites_321
+      name: 4
       rect:
         serializedVersion: 2
         x: 361
@@ -7441,6 +7441,16 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      0: 1996148384
+      1: -1581080037
+      2: -693589491
+      3: -1167659891
+      4: 422904724
+      5: 355757285
+      6: -887639545
+      7: 973809513
+      8: -888305635
+      9: -1612890349
       NES - Battle City JPN - General Sprites_0: 4179489031832746871
       NES - Battle City JPN - General Sprites_1: 949592173
       NES - Battle City JPN - General Sprites_10: -304756569
@@ -7627,8 +7637,6 @@ TextureImporter:
       NES - Battle City JPN - General Sprites_263: -178765267
       NES - Battle City JPN - General Sprites_264: 231810746
       NES - Battle City JPN - General Sprites_265: 990134051
-      NES - Battle City JPN - General Sprites_266: 355757285
-      NES - Battle City JPN - General Sprites_267: -887639545
       NES - Battle City JPN - General Sprites_268: 21315954
       NES - Battle City JPN - General Sprites_269: 228034342
       NES - Battle City JPN - General Sprites_27: 1862526845
@@ -7655,13 +7663,9 @@ TextureImporter:
       NES - Battle City JPN - General Sprites_289: 832480803
       NES - Battle City JPN - General Sprites_29: 1251590932
       NES - Battle City JPN - General Sprites_290: -662788127
-      NES - Battle City JPN - General Sprites_291: 973809513
-      NES - Battle City JPN - General Sprites_292: -888305635
       NES - Battle City JPN - General Sprites_293: 459981904
       NES - Battle City JPN - General Sprites_294: -156919084
       NES - Battle City JPN - General Sprites_295: 1960747573
-      NES - Battle City JPN - General Sprites_296: -1581080037
-      NES - Battle City JPN - General Sprites_297: -693589491
       NES - Battle City JPN - General Sprites_298: -976553217
       NES - Battle City JPN - General Sprites_299: 1465922155
       NES - Battle City JPN - General Sprites_3: -1165724469
@@ -7683,13 +7687,9 @@ TextureImporter:
       NES - Battle City JPN - General Sprites_313: 648939484
       NES - Battle City JPN - General Sprites_314: -408540246
       NES - Battle City JPN - General Sprites_315: 1069082894
-      NES - Battle City JPN - General Sprites_316: -1612890349
       NES - Battle City JPN - General Sprites_317: 1561782275
       NES - Battle City JPN - General Sprites_318: 2038803466
-      NES - Battle City JPN - General Sprites_319: 1996148384
       NES - Battle City JPN - General Sprites_32: 484002882
-      NES - Battle City JPN - General Sprites_320: -1167659891
-      NES - Battle City JPN - General Sprites_321: 422904724
       NES - Battle City JPN - General Sprites_322: -1358349622
       NES - Battle City JPN - General Sprites_323: 913678418
       NES - Battle City JPN - General Sprites_324: -1571048588

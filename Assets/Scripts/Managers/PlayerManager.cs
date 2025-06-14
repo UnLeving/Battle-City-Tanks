@@ -10,6 +10,7 @@ namespace Managers
     {
         [Inject] private readonly TankPlayer tankPrefab;
         [Inject] private readonly SpawnPoint spawnPoint;
+        [Inject] private readonly PlayerLivesService playerLivesService;
         
         private Tank currentTank;
     
@@ -38,10 +39,18 @@ namespace Managers
 
         private void HandleTankDeath()
         {
-            OnPlayerDeath?.Invoke();
-        
-            // Respawn after delay
-            Object.Destroy(currentTank.gameObject, 2f);
+            currentTank.gameObject.SetActive(false);
+            
+            playerLivesService.LoseLife();
+
+            if (playerLivesService.CurrentLives <= 0)
+            {
+                OnPlayerDeath?.Invoke();
+                
+                return;
+            }
+            
+            Summon();
         }
     }
 }

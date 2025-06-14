@@ -1,4 +1,3 @@
-using DI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,36 +6,63 @@ namespace Player
     public class PlayerInputController : MonoBehaviour
     {
         [SerializeField] private float rotationOffset = -90f; // Adjust in Inspector if needed
-        [SerializeField] private SpriteRenderer spriteRenderer;
-        [SerializeField] private Tank tank;
         [SerializeField] private FloatSO moveSpeed;
-        [SerializeField] private PlayerInput playerInput;
 
+        private Tank _tank;
+        private SpriteRenderer _spriteRenderer;
         private Vector2 _moveInput;
 
-        private void OnEnable()
+        private void Awake()
         {
-            tank.OnHitEvent += TankOnOnHitEvent;
+            _tank = GetComponent<Tank>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
-
-        private void OnDisable()
-        {
-            tank.OnHitEvent -= TankOnOnHitEvent;
-        }
-    
-        private void TankOnOnHitEvent()
-        {
-            
-        }
-
+        
         public void OnMove(InputValue input)
         {
-            _moveInput = input.Get<Vector2>();
+            Vector2 rawInput = input.Get<Vector2>();
+    
+            // If no input, clear movement
+            if (rawInput == Vector2.zero)
+            {
+                _moveInput = Vector2.zero;
+                return;
+            }
+    
+            // Check if there's new input on X axis
+            if (Mathf.Abs(rawInput.x) > 0 && Mathf.Abs(_moveInput.x) == 0)
+            {
+                _moveInput = new Vector2(rawInput.x, 0);
+            }
+            // Check if there's new input on Y axis
+            else if (Mathf.Abs(rawInput.y) > 0 && Mathf.Abs(_moveInput.y) == 0)
+            {
+                _moveInput = new Vector2(0, rawInput.y);
+            }
+            // If currently moving horizontally and vertical input is pressed
+            else if (Mathf.Abs(_moveInput.x) > 0 && Mathf.Abs(rawInput.y) > 0)
+            {
+                _moveInput = new Vector2(0, rawInput.y);
+            }
+            // If currently moving vertically and horizontal input is pressed
+            else if (Mathf.Abs(_moveInput.y) > 0 && Mathf.Abs(rawInput.x) > 0)
+            {
+                _moveInput = new Vector2(rawInput.x, 0);
+            }
+            // Update the current direction if still pressing the same axis
+            else if (Mathf.Abs(_moveInput.x) > 0)
+            {
+                _moveInput = new Vector2(rawInput.x, 0);
+            }
+            else if (Mathf.Abs(_moveInput.y) > 0)
+            {
+                _moveInput = new Vector2(0, rawInput.y);
+            }
         }
 
         private void OnAttack(InputValue input)
         {
-            tank.Cannon.Fire();
+            _tank.Cannon.Fire();
         }
 
         private void Update()
@@ -56,9 +82,9 @@ namespace Player
 
         private void ChangeRendererSpriteOnMove()
         {
-            spriteRenderer.sprite = spriteRenderer.sprite == tank.tankSO.tanks[0].f1
-                ? tank.tankSO.tanks[0].f0
-                : tank.tankSO.tanks[0].f1;
+            _spriteRenderer.sprite = _spriteRenderer.sprite == _tank.tankSO.tanks[0].f1
+                ? _tank.tankSO.tanks[0].f0
+                : _tank.tankSO.tanks[0].f1;
         }
     }
 }

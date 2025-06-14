@@ -20,7 +20,7 @@ public class EnemyMover : MonoBehaviour
     
     private void OnEnable()
     {
-        Debug.Log("EnemyMover.OnEnable");
+        //Debug.Log("EnemyMover.OnEnable");
         
         tank.OnHitEvent += TankOnOnHitEvent;
         
@@ -113,6 +113,6 @@ public class EnemyMover : MonoBehaviour
 
     private void UpdateFiring()
     {
-        //tank.OnAttack();
+        tank.Cannon.Fire();
     }
 }

@@ -1,4 +1,7 @@
-public class TankPlayer : Tank
+namespace Player
 {
+    public class TankPlayer : Tank
+    {
     
+    }
 }

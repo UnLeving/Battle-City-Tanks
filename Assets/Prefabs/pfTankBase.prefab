@@ -96,7 +96,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5397958598378888810}
-  - component: {fileID: 6417890404910791673}
   - component: {fileID: 4855808027627259335}
   - component: {fileID: 502358641368009624}
   - component: {fileID: 680470210973868121}
@@ -126,24 +125,6 @@ Transform:
   - {fileID: 8139497972892602975}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6417890404910791673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4080319854766464166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e75fb11d92369d4699f087baf9ca824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionSpriteRendererEffect: {fileID: 7854297467817539502}
-  invincibilitySpriteRendererEffect: {fileID: 2005368579540139350}
-  _renderer: {fileID: 4855808027627259335}
-  _collider: {fileID: 502358641368009624}
-  tankSO: {fileID: 0}
-  <Cannon>k__BackingField: {fileID: 8524510760355657617}
 --- !u!212 &4855808027627259335
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -421,7 +402,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4849566201284891504}
   spriteRendererEffectsSO: {fileID: 11400000, guid: 8df7fa82f8700ae428c82a2695aae0c5, type: 2}
-  timer: 0
 --- !u!1 &6287421473121530548
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +504,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5809606255123698030}
   spriteRendererEffectsSO: {fileID: 11400000, guid: dc972b540f2b3fc42abeb17f4e5b93bc, type: 2}
-  timer: 0
 --- !u!1001 &2252767078293284623
 PrefabInstance:
   m_ObjectHideFlags: 0

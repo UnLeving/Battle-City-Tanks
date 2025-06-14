@@ -7,6 +7,7 @@
     "com.unity.2d.tilemap.extras": "4.3.1",
     "com.unity.ide.rider": "3.0.36",
     "com.unity.inputsystem": "1.14.0",
+    "com.unity.project-auditor": "1.0.1",
     "com.unity.render-pipelines.universal": "17.1.0",
     "com.unity.ugui": "2.0.0",
     "jp.hadashikick.vcontainer": "https://github.com/hadashiA/vContainer.git?path=VContainer/Assets/VContainer",

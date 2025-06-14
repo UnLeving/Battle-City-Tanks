@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2390886985540394982}
   - component: {fileID: 8506646458118143126}
   m_Layer: 11
-  m_Name: pfHQ
+  m_Name: pfHQView
   m_TagString: HQ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

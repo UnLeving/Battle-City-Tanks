@@ -113,6 +113,6 @@ public class EnemyMover : MonoBehaviour
 
     private void UpdateFiring()
     {
-        tank.OnAttack();
+        //tank.OnAttack();
     }
 }

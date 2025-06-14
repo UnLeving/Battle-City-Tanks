@@ -220,6 +220,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Busy>k__BackingField: 0
+--- !u!1 &326246379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 326246381}
+  - component: {fileID: 326246380}
+  m_Layer: 0
+  m_Name: GameLifetimeScope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &326246380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326246379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f354de34eda899b40ac5235ab24f50b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentReference:
+    TypeName: 
+  autoRun: 1
+  autoInjectGameObjects: []
+  levelConfig: {fileID: 11400000, guid: 2ec3ee723ffbfb94b881fd353af1466d, type: 2}
+  playerTankPrefab: {fileID: 3462323791634871771, guid: 18e5ac45491a70c4ea32f2466940b7e8, type: 3}
+  enemyTankPrefab: {fileID: 2539307149384705452, guid: f6023ccb5b1be3f4caa4b113f51bf30b, type: 3}
+  playerSpawnPoint: {fileID: 2084367681}
+  enemySpawnPoints:
+  - {fileID: 304943863}
+  - {fileID: 1695031069}
+  - {fileID: 1391460101}
+  tankObjectPooling: {fileID: 1839735313}
+  hqView: {fileID: 1730154364}
+--- !u!4 &326246381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326246379}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434218235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,7 +2510,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 502617830}
-  - component: {fileID: 502617831}
   m_Layer: 0
   m_Name: EnemyManager
   m_TagString: Untagged
@@ -2478,24 +2535,6 @@ Transform:
   - {fileID: 1391460099}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &502617831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502617829}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6c8e66137921df45818d101fd01fee0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelConfig: {fileID: 11400000, guid: 2ec3ee723ffbfb94b881fd353af1466d, type: 2}
-  tankPrefab: {fileID: 9105684290325198471, guid: f6023ccb5b1be3f4caa4b113f51bf30b, type: 3}
-  spawnPoints:
-  - {fileID: 304943863}
-  - {fileID: 1695031069}
-  - {fileID: 1391460101}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -10436,7 +10475,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354431548}
-  - component: {fileID: 1354431547}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -10444,20 +10482,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1354431547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354431546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45d4e376b3581e04d98f70fdf998f5c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tankPrefab: {fileID: 5660608080974926322, guid: 18e5ac45491a70c4ea32f2466940b7e8, type: 3}
-  spawnPoint: {fileID: 2084367681}
 --- !u!4 &1354431548
 Transform:
   m_ObjectHideFlags: 0
@@ -10676,6 +10700,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Busy>k__BackingField: 0
+--- !u!114 &1730154364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8506646458118143126, guid: aa7d37be5a7bf2e47a964ef892a7cc8f, type: 3}
+  m_PrefabInstance: {fileID: 6797776717251390585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6d6bf6d195dfe4fbd56cad4f649363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1839735312
 GameObject:
   m_ObjectHideFlags: 0
@@ -10705,7 +10740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81897e5e7f654036bc6f58b30161d0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 9105684290325198471, guid: f6023ccb5b1be3f4caa4b113f51bf30b, type: 3}
+  prefab: {fileID: 2539307149384705452, guid: f6023ccb5b1be3f4caa4b113f51bf30b, type: 3}
   collectionCheck: 1
   defaultCapacity: 20
   maxSize: 30
@@ -10736,7 +10771,7 @@ GameObject:
   - component: {fileID: 2084367682}
   - component: {fileID: 2084367681}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10875,7 +10910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4539076625319302243, guid: aa7d37be5a7bf2e47a964ef892a7cc8f, type: 3}
       propertyPath: m_Name
-      value: HQ
+      value: HQView
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10886,6 +10921,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 326246381}
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 710384191}

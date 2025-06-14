@@ -36,7 +36,7 @@ public class Round : MonoBehaviour, IDamageable
 
     private IEnumerator Fire(Vector3 dir)
     {
-        Debug.Log("Fire");
+        //Debug.Log("Fire");
         
         Released = false;
         

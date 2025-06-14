@@ -37,7 +37,7 @@ namespace Managers
             currentTank.gameObject.SetActive(true);
         }
 
-        private void HandleTankDeath()
+        private void HandleTankDeath(Tank tank)
         {
             currentTank.gameObject.SetActive(false);
             

@@ -12,7 +12,7 @@ public class Tank : MonoBehaviour, IDamageable
     [field: SerializeField] public Cannon Cannon { get; private set; }
 
     public event Action OnHitEvent;
-    public event Action OnDeathEvent;
+    public event Action<Tank> OnDeathEvent;
 
     private bool _isInvincible = false;
 
@@ -54,7 +54,7 @@ public class Tank : MonoBehaviour, IDamageable
         {
             gameObject.SetActive(false);
 
-            OnDeathEvent?.Invoke();
+            OnDeathEvent?.Invoke(this);
         });
     }
 }
